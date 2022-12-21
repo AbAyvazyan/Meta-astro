@@ -2,8 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
+import Main from '../layouts/Main.astro';
+import RecordSection from '../components/RecordSection.astro';
+import WaveSection from '../components/WaveSection.astro';
 ---
 
 <Layout title="Home">
 	<Header/>
+	<Main>
+		<RecordSection/>
+		<WaveSection/>
+	</Main>
 </Layout>
