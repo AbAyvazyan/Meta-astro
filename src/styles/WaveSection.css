@@ -1,0 +1,91 @@
+.wave_section{
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wave_nft_part{
+    width: 360px;
+    
+}
+
+.wave_nft_heading{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Audiowide, sans-serif;
+    color: #fff;
+    font-size: 2.369rem;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.wave_nft_heading > span{
+    display: block;
+    color: black;
+    text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+}
+
+.wave_nft_image_part{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.wave_nft_image_part img{
+    width: 100%;
+}
+
+.wave_text_part{
+    width: 600px;
+}
+
+.wave_text{
+    margin-top: 35px;
+    margin-bottom: 30px;
+    padding: 0px 0px 0px 20px;
+    border-left: 2px solid rgb(var(--accent));
+    font-family: 'DM Mono', sans-serif;
+    color: rgb(var(--accent));
+    font-size: 1.333rem;
+    line-height: 35px;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+}
+
+.wave_text_part p{
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+
+.wave_text_part p:nth-child(4){
+   margin-bottom: 50px;
+}
+
+.wave_text_part a{
+    text-decoration: none;
+    padding: 12px 32px;
+    border: 1px solid rgb(var(--accent));
+    background-color: transparent;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    word-spacing: 7px;
+}
+
+.wave_text_part a:hover{
+    color: black;
+    background-color: rgb(var(--accent));
+}
