@@ -1,0 +1,59 @@
+.record_section {
+    display: flex;
+    height: 520px;
+}
+
+.sec1_text_part {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sec1_image_part {
+    width: 60%;
+    height: 100%;
+}
+
+.sec1_image_part>img {
+    max-width: 100%;
+}
+
+h1 {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Audiowide', sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 3.157rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.sec1_text_part p {
+    width: 350px;
+    height: 50px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.sec1_text_part div {
+    width: 100%;
+}
+
+.sec1_text_part a {
+    padding: 16px 32px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(var(--accent));
+    transition: 0.2s;
+}
+
+.sec1_text_part a:hover {
+    background-color: #222;
+    color: rgb(var(--accent));
+}
