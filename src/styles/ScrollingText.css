@@ -5,12 +5,13 @@
     height: 70px;
     overflow: hidden;
     z-index: 1;
+    margin-top: 5vh;
   }
   .m-scroll__title {
     display: flex;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
@@ -21,7 +22,7 @@
   }
   .m-scroll__title > div {
     display: flex;
-    animation: scrollText 13s infinite linear;
+    animation: scrollText 20s infinite linear;
   }
   .m-scroll__title h1 {
     margin: 0;
@@ -32,14 +33,22 @@
   .m-scroll__title a {
     text-decoration: none;
     color: white;
+    text-transform: uppercase;
+    font-family: Audiowide,sans-serif;
   }
   .m-scroll__title a:hover {
     -webkit-text-stroke: 1px white;
     color: transparent;
   }
-  /*div:hover {
-    animation-play-state: paused;
-  }*/
+  
+  .outline-shadow{
+    display: block;
+    color: black!important;
+    text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+  }
+  
+
+
   @keyframes scrollText {
     from {
       transform: translateX(0%);
@@ -48,4 +57,5 @@
       transform: translateX(-50%);
     }
   }
+
   

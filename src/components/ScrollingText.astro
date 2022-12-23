@@ -1,5 +1,7 @@
 ---
 import '../styles/ScrollingText.css'
+
+const {title1,title2} = Astro.props
 ---
 
 
@@ -7,10 +9,10 @@ import '../styles/ScrollingText.css'
     <div class="m-scroll__title">
       <div>
         <h1>
-          <a href="https://dribbble.com/JulianoF">Likedin,</a> <a href="https://dribbble.com/JulianoF">Dribbble</a> &amp; <a href="https://dribbble.com/JulianoF">Instagram </a>&nbsp;
+          <a>{title1}</a> <a class="outline-shadow">{title2}</a><a>{title1} </a> <a class="outline-shadow">{title2} </a><a>{title1} </a><a class="outline-shadow">{title2} </a>
         </h1>
         <h1>
-        <a href="https://dribbble.com/JulianoF">Likedin,</a> <a href="https://dribbble.com/JulianoF">Dribbble</a> &amp; <a href="https://dribbble.com/JulianoF">Instagram </a>&nbsp;
+        <a>{title1}</a> <a class="outline-shadow">{title2}</a><a>{title1} </a> <a class="outline-shadow">{title2} </a><a>{title1} </a><a class="outline-shadow">{title2} </a>
         </h1>
       </div>
     </div>
