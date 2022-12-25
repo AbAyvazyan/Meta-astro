@@ -23,7 +23,7 @@
 .wave_nft_heading > span{
     display: block;
     color: black;
-    text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+    text-shadow: var(--accent-shadow);
 }
 
 .wave_nft_image_part{

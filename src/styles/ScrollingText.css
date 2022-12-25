@@ -22,7 +22,7 @@
   }
   .m-scroll__title > div {
     display: flex;
-    animation: scrollText 20s infinite linear;
+    animation: scrollText 35s infinite linear;
   }
   .m-scroll__title h1 {
     margin: 0;
@@ -36,15 +36,11 @@
     text-transform: uppercase;
     font-family: Audiowide,sans-serif;
   }
-  .m-scroll__title a:hover {
-    -webkit-text-stroke: 1px white;
-    color: transparent;
-  }
-  
+
   .outline-shadow{
     display: block;
     color: black!important;
-    text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+    text-shadow: var(--accent-shadow);
   }
   
 

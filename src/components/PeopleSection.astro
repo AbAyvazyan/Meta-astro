@@ -1,0 +1,43 @@
+---
+import '../styles/PeopleSection.css'
+import Card from './Card.astro';
+
+const people = [
+    {
+        imageSource:'/Images/people1.jpg',
+        name:'Mark Popson'
+    },
+    {
+        imageSource:'/Images/people2.jpg',
+        name:'Pete Bentz'
+    },{
+        imageSource:'/Images/people3.jpg',
+        name:'Daniel Youth'
+    },{
+        imageSource:'/Images/people4.jpg',
+        name:'Roman Gore'
+    },{
+        imageSource:'/Images/people5.jpg',
+        name:'Tonya'
+    },{
+        imageSource:'/Images/people6.jpg',
+        name:'Ivor'
+    },{
+        imageSource:'/Images/people7.jpg',
+        name:'Somae Petit'
+    }
+]
+---
+
+<section class="people_section">
+    <div class="people_container">
+    {people.map(person=>{
+        return <a class="single_person">
+            <div class="single_image_holder">
+                <img src={person.imageSource} alt="">
+            </div>
+                <p> {person.name} </p>
+                </a>
+    })}
+    </div>
+</section>
