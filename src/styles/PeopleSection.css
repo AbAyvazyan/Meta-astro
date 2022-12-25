@@ -1,8 +1,8 @@
-.people_section{
+.people_section {
     margin-top: 7vh;
 }
 
-.people_container{
+.people_container {
     display: grid;
     width: 100%;
     grid-auto-columns: 1fr;
@@ -14,15 +14,13 @@
     grid-template-rows: auto;
 }
 
-.single_person{
-    height: 45vh;
+.single_person {
     color: aliceblue;
     overflow: hidden;
     cursor: pointer;
-
 }
 
-.single_image_holder{
+.single_image_holder {
     width: 100%;
     overflow: hidden;
     border-bottom-left-radius: 30px;
@@ -31,7 +29,7 @@
     position: relative;
 }
 
-.single_image_holder > img{
+.single_image_holder>img {
     height: 100%;
     width: 100%;
     border-bottom-left-radius: 30px;
@@ -41,11 +39,11 @@
     scale: 1.05;
 }
 
-.single_image_holder > img:hover{
+.single_image_holder>img:hover {
     transform: scale(1.05);
     width: 100%;
 }
 
-.single_person p{
+.single_person p {
     text-align: center;
 }
