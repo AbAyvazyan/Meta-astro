@@ -1,3 +1,5 @@
+@import "fonts.css";
+
 :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
@@ -5,13 +7,6 @@
     --accent-white: white;
 }
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('/Poppins/') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 body {
     margin: 0;
