@@ -1,0 +1,59 @@
+---
+import '../styles/FAQSection.css'
+import Questions from './questions/Questions.astro';
+
+const questions = [
+    {
+        question:'How can I get into Meta RL?',
+        answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.'
+    },
+    {
+        question:'When is the NFT launch?',
+        answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.'
+    },
+    {
+        question:'Can I hold META WAVE NFT as an investment?',
+        answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.'
+    },
+    {
+        question:'Where can I get a WAVE NFT?',
+        answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.'
+    },
+]
+---
+
+<section class="faq_section" data-aos="fade-up">
+    <div class="faq_left">
+        <h2>FREQUENTLY <span>ASKED</span> QUESTIONS</h2>
+        <div>
+            <img src="/Images/wave1.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- single_active_question -->
+    <div class="faq_question_part">
+
+        {questions.map(question=>{
+            return <Questions question={question.question} answer={question.answer}/>
+        })}
+
+        
+    </div>
+</section>
+
+
+<script>
+
+    const singleQuestions = document.querySelectorAll('.single_question')
+
+    singleQuestions.forEach(questionElem=>{
+        questionElem.addEventListener('click',()=>{
+            questionElem.classList.toggle('single_active_question')
+            const openCloseButton = questionElem.children[0].children[1]
+            const childElem = questionElem.children[1]
+            childElem.style.display == 'block' ? childElem.style.display = 'none':childElem.style.display = 'block'
+            openCloseButton.style.animationName == '' || openCloseButton.style.animationName == 'open' ? openCloseButton.style.animationName = 'close': openCloseButton.style.animationName = 'open'
+        })
+    })
+
+</script>

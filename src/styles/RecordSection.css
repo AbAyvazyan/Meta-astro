@@ -5,7 +5,6 @@
 
 .sec1_text_part {
     width: 40%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -32,13 +31,13 @@ h1 {
 
 .sec1_text_part p {
     width: 350px;
-    height: 50px;
+    max-height: 130px;
     color: #fff;
     font-size: 1rem;
     font-weight: 300;
     line-height: 25px;
     letter-spacing: 1px;
-    margin: 0;
+    margin: 1vh 0 2vh;
 }
 
 .sec1_text_part div {
@@ -46,7 +45,11 @@ h1 {
 }
 
 .sec1_text_part a {
-    padding: 16px 32px;
+    width: 170px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: #fff;
     background-color: rgb(var(--accent));
@@ -56,4 +59,17 @@ h1 {
 .sec1_text_part a:hover {
     background-color: #222;
     color: rgb(var(--accent));
+}
+
+@media only screen and (max-width: 900px) {
+    .record_section {
+        flex-wrap: wrap;
+    }
+    .sec1_text_part {
+        width: 100%;
+        padding-left: 25px;
+    }
+    .sec1_image_part {
+        width: 100%;
+    }
 }

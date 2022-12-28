@@ -1,0 +1,63 @@
+---
+import '../styles/TeamSection.css'
+
+const teamMembers = [
+    {
+        imgSrc:'/Images/team1.jpg',
+        name:'SHAKY LAKE',
+        position:'FOUNDER',
+        twiterLink:'https://twitter.com/',
+        linkedInLink:'https://www.linkedin.com/',
+        summary:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+    },
+    {
+        imgSrc:'/Images/team2.jpg',
+        name:'BAKY HIKE',
+        position:'CO-FOUNDER',
+        twiterLink:'https://twitter.com/',
+        linkedInLink:'https://www.linkedin.com/',
+        summary:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+    },
+    {
+        imgSrc:'/Images/team3.jpg',
+        name:'VANIA DO',
+        position:'PRODUCER',
+        twiterLink:'https://twitter.com/',
+        linkedInLink:'https://www.linkedin.com/',
+        summary:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+    },
+]
+---
+
+<section class="team_section" data-aos="fade-up">
+    <div class="team_container">
+    {teamMembers.map(member=>{
+        return (
+        <div class="single_person">
+            <div class="single_image_holder">
+                <img src={member.imgSrc} alt="">
+            </div>
+                <p class="member_name"> {member.name} </p>
+                <div class="member_position">{member.position}</div>
+                <div class="team_social_buttons">
+                    <a href={member.twiterLink} target="_blank">
+                        <div class="social_media_button">
+                            <img src="/Images/twitter.png" alt="">
+                        </div>   
+                    </a>
+                    
+                    <a href={member.linkedInLink} target="_blank">
+                        <div class="social_media_button">
+                            <img src="/Images/linkedin.png" alt="">
+                        </div>   
+                    </a>
+                </div>
+
+                <p style="font-size:12px;width:80%;margin:2vh auto">
+                {member.summary}    
+                </p>
+                </div>
+        )
+    })}
+    </div>
+</section>

@@ -1,0 +1,43 @@
+.team_section {
+    margin: 7vh 0;
+}
+
+.team_container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    grid-template-rows: auto;
+}
+
+.team_social_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.member_position {
+    color: rgb(var(--accent));
+    text-align: center;
+    margin: 0 auto 2vh;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.member_name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 850px) {
+    .team_container {
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .team_container {
+        grid-template-columns: 1fr;
+        padding: 0 15px
+    }
+}

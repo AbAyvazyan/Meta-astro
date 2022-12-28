@@ -1,5 +1,4 @@
 @import "fonts.css";
-
 :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
@@ -7,11 +6,11 @@
     --accent-white: white;
 }
 
-
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: black;
+    overflow-x: hidden;
 }
 
 main {
@@ -23,5 +22,5 @@ main {
 
 section {
     width: 1180px;
-    padding: 60px 0;
+    padding: 60px 15px;
 }

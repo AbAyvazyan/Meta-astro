@@ -2,7 +2,7 @@
 import '../styles/Header.css'
 ---
 
-<header>
+<header id="header">
     <nav>
         <div class="image_holder"><img src="/Images/logo.svg" alt=""></div>
         <div class="nav-links">
@@ -29,5 +29,65 @@ import '../styles/Header.css'
                 <img src="/Images/telegram.png" alt="">
             </div>
         </div>
+
+        <span class="hamburger-button passive" id="hamburger-button" > <img src="/Images/more.png" alt=""> </span>
     </nav>
+
+    <div class="hamburger_popup" id="hamburger_popup">
+
+    <div class="nav-links-hamburger">
+            
+        <div>Wave NFTs</div>
+        <div>Stories</div>
+        <div>Contact</div>
+    </div>
+
+    <div class="social_button_hamburger">
+        <div class="social_media_button">
+            <img src="/Images/twitter.png" alt="">
+        </div>
+
+        <div class="social_media_button">
+            <img src="/Images/discord.png" alt="">
+        </div>
+
+        <div class="social_media_button">
+            <img src="/Images/youtube.png" alt="">
+        </div>
+
+        <div class="social_media_button">
+            <img src="/Images/telegram.png" alt="">
+        </div>
+    </div>
+    </div>
+    
+   
 </header>
+
+
+
+
+
+<script>
+
+    const hamburgerButton = document.getElementById('hamburger-button')
+    const hamburgerPopUp = document.getElementById('hamburger_popup')
+    const header = document.getElementById('header')
+    const humburgerImage = hamburgerButton && hamburgerButton.children[0] as HTMLImageElement
+
+    hamburgerButton && hamburgerButton.addEventListener('click',()=>{
+        if(hamburgerButton.className.includes('passive')){
+        hamburgerButton.classList.remove('passive')
+        hamburgerPopUp ? hamburgerPopUp.style.display = 'flex' : null
+        header ? header.style.backgroundColor = 'rgb(var(--accent))':null
+        header ? header.style.transition = '0s':null
+        humburgerImage ? humburgerImage.src = '/Images/close.png':null
+        }else{
+            hamburgerButton.classList.add('passive')
+            humburgerImage ? humburgerImage.src = '/Images/more.png':null
+            hamburgerPopUp ? hamburgerPopUp.style.display = 'none' : null
+            header ? header.style.backgroundColor = 'black':null
+        }
+    })
+
+</script>

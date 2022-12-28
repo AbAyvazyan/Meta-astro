@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Main from '../layouts/Main.astro';
 import RecordSection from '../components/RecordSection.astro';
@@ -8,6 +7,13 @@ import WaveSection from '../components/WaveSection.astro';
 import ScrollingText from '../components/ScrollingText.astro';
 import PeopleSection from '../components/PeopleSection.astro';
 import StorySection from '../components/StorySection.astro';
+import Attachment from '../components/Attachment.astro';
+import RoadMapSection from '../components/RoadMapSection.astro';
+import OurPartnersSection from '../components/OurPartnersSection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import TeamSection from '../components/TeamSection.astro';
+import JoinUsSection from '../components/JoinUsSection.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Home">
@@ -18,5 +24,13 @@ import StorySection from '../components/StorySection.astro';
 		<ScrollingText title1='artists' title2='artists'/>
 		<PeopleSection/>
 		<StorySection/>
+		<Attachment/>
+		<RoadMapSection/>
+		<OurPartnersSection/>
+		<FAQSection/>
+		<ScrollingText title1='team' title2='meet'/>
+		<TeamSection/>
+		<JoinUsSection/>
 	</Main>
+	<Footer/>
 </Layout>

@@ -10,9 +10,20 @@ import '../styles/global.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Home</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			import Aos from "aos";
+
+			Aos.init({
+				duration:1100,
+				delay:300
+			}
+			);
+		</script>
 	</body>
 </html>
 <style is:global>

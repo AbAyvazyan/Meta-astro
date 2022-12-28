@@ -1,0 +1,69 @@
+<div class='founders_story' id="founders_story">
+    <div class="founders_image_part"><img src="/Images/story-image.jpg" alt=""></div>
+
+    <div class="founders_text_part">
+
+        <h2 class="founders_heading">
+            META record label was founded by Shaky Lake and Baky Hike in 2020 business accelerator.
+        </h2>
+
+        <p>Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras.</p>
+
+        <p>Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur adipiscing elit ut aliquam purus. Porta nibh venenatis cras sed felis. Aenean vel elit scelerisque mauris pellentesque pulvinar. Et malesuada fames ac turpis egestas sed tempus. Enim sit amet venenatis urna cursus eget.</p>
+
+        <p>Maecenas ultricies mi eget mauris pharetra et ultrices. A condimentum vitae sapien pellentesque habitant morbi.</p>
+    </div>
+</div>
+
+
+
+<style>
+    .founders_story {
+    display: flex;
+    justify-content: space-between;
+}
+
+.founders_image_part {
+    width: 25%;
+    height: 100%;
+}
+
+.founders_image_part>img {
+    width: 100%;
+}
+
+.founders_text_part {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.founders_heading {
+    color: rgb(var(--accent));
+    border-left: 2px solid rgb(var(--accent));
+    padding: 5px 0 5px 20px;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    margin-top: 1vh;
+    font-weight: 300;
+}
+
+.founders_text_part>p {
+    color: var(--accent-white);
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 1200px) {
+    .founders_story  {
+        flex-wrap: wrap;
+
+    }
+
+    .founders_text_part{
+        width: 100%;
+    }
+}
+</style>

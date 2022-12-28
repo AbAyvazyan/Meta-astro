@@ -1,8 +1,11 @@
 ---
 import '../styles/StorySection.css'
+import Founders from './singleStory/Founders.astro';
+import Partners from './singleStory/Partners.astro';
+import Future from './singleStory/Future.astro';
 ---
 
-<section class="story_section">
+<section class="story_section" data-aos="fade-up">
 
     <h2 class="story_h">MRL.<span>THE STORY.</span></h2>
 
@@ -10,28 +13,65 @@ import '../styles/StorySection.css'
         <div class="story_category">
 
             <div class="category_holder">
-                <div class="story_single_category active_single_category">Our founders</div>
-                <div class="story_single_category">Partners</div>
-                <div class="story_single_category">The future</div>
+                <div class="story_single_category active_single_category" id='founders'>Our founders</div>
+                <div class="story_single_category" id='partners'>Partners</div>
+                <div class="story_single_category"  id='future'>The future</div>
             </div>
 
         </div>
 
-        <div class="story_part">
+        <div class="story_part" id="stories_part">
 
-            <div class='founders_story'>
-                <div class="founders_image_part"><img src="/Images/story-image.jpg" alt=""></div>
-
-                <div class="founders_text_part">
-
-                    <h2 class="founders_heading">
-                        META record label was founded by Shaky Lake and Baky Hike in 2020 business accelerator.
-                    </h2>
-
-                </div>
-            </div>
+            <Founders/>
+            <Partners/>
+            <Future/>
 
         </div>
     </div>
 
 </section>
+
+
+<script>
+
+    const buttons = document.querySelectorAll('.story_single_category')
+    const stories = document.getElementById('stories_part')
+
+    const foundersStory = document.getElementById('founders_story')
+    const partnersStory = document.getElementById('partners_story')
+    const futureStory = document.getElementById('future_story')
+
+
+    buttons.forEach((button)=>{
+        
+            button.addEventListener('click',()=>{
+
+                buttons.forEach(single=>single.classList.remove('active_single_category'))
+
+                button.classList.add('active_single_category')
+
+                    switch (button.id) {
+                        case 'founders':
+                        partnersStory ? partnersStory.style.display = 'none':null;
+                        futureStory ? futureStory.style.display = 'none':null;
+                        foundersStory ? foundersStory.style.display='flex' : null;
+                        break;
+                
+                        case 'partners':
+                        partnersStory ? partnersStory.style.display = 'block':null;
+                        futureStory ? futureStory.style.display = 'none':null;
+                        foundersStory ? foundersStory.style.display='none' : null;
+                        console.log(partnersStory);
+                        break;
+
+                        case 'future':
+                        partnersStory ? partnersStory.style.display = 'none':null;
+                        futureStory ? futureStory.style.display = 'block':null;
+                        foundersStory ? foundersStory.style.display='none' : null;
+                        break;
+            
+                }
+            })
+    })
+
+</script>

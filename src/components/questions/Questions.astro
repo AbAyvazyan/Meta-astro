@@ -1,0 +1,91 @@
+---
+const {question,answer} = Astro.props
+---
+
+<div class="single_question ">
+    <div><span>{question}</span><span class='open_faq'>&#x2b;</span></div>
+    
+    <div class="faq_answer">
+        <p>{answer}</p>
+    </div>
+</div>
+
+
+
+<style>
+    .single_question {
+    height: 5vh;
+    background: #222;
+    color: var(--accent-white);
+    display: flex;
+    padding: 10px 30px;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 2px;
+    flex-wrap: wrap;
+    transition: 500ms;
+    overflow: hidden;
+    margin: 2vh 0;
+}
+
+.single_active_question {
+    height: 17vh;
+    border: 2px solid rgb(var(--accent));
+}
+
+.single_question div:first-child {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.faq_answer {
+    display: none;
+}
+
+.faq_answer p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.open_faq {
+    position: absolute;
+    right: 30px;
+    font-size: 30px;
+    animation: 500ms forwards;
+    transform: rotate(0deg);
+}
+
+@keyframes open {
+    from {
+        transform: rotate(45deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes close {
+  
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(45deg)
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    .single_active_question{
+        height:30vh;
+    }
+
+    
+    .open_faq {
+        right: 10px;
+    }
+}
+</style>

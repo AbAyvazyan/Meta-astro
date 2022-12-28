@@ -8,16 +8,15 @@
     grid-auto-columns: 1fr;
     grid-column-gap: 60px;
     grid-row-gap: 60px;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: auto;
     grid-template-rows: auto;
 }
 
 .single_person {
-    color: aliceblue;
+    color: rgb(var(--accent-white));
     overflow: hidden;
-    cursor: pointer;
 }
 
 .single_image_holder {
@@ -27,13 +26,14 @@
     border-bottom: 5px solid rgb(var(--accent));
     padding: 0;
     position: relative;
+    cursor: pointer;
 }
 
 .single_image_holder>img {
     height: 100%;
     width: 100%;
     border-bottom-left-radius: 30px;
-    transition: transform 0.25s;
+    transition: transform 600ms;
     object-fit: cover;
     margin: 0;
     scale: 1.05;
@@ -46,4 +46,19 @@
 
 .single_person p {
     text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .people_container {
+        -ms-grid-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .people_container {
+        -ms-grid-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

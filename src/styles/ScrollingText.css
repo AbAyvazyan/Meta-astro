@@ -5,9 +5,10 @@
     height: 70px;
     overflow: hidden;
     z-index: 1;
-    margin-top: 5vh;
-  }
-  .m-scroll__title {
+    margin-top: 7vh;
+}
+
+.m-scroll__title {
     display: flex;
     position: absolute;
     top: 0;
@@ -19,39 +20,38 @@
     white-space: nowrap;
     transform: scale(2);
     transition: all 1s ease;
-  }
-  .m-scroll__title > div {
+}
+
+.m-scroll__title>div {
     display: flex;
-    animation: scrollText 35s infinite linear;
-  }
-  .m-scroll__title h1 {
+    animation: scrollText 50s infinite linear;
+}
+
+.m-scroll__title h1 {
     margin: 0;
     font-size: 40px;
     color: #ffffff;
     transition: all 2s ease;
-  }
-  .m-scroll__title a {
+}
+
+.m-scroll__title a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    font-family: Audiowide,sans-serif;
-  }
+    font-family: Audiowide, sans-serif;
+}
 
-  .outline-shadow{
+.outline-shadow {
     display: block;
     color: black!important;
     text-shadow: var(--accent-shadow);
-  }
-  
+}
 
-
-  @keyframes scrollText {
+@keyframes scrollText {
     from {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
     to {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
-  }
-
-  
+}
